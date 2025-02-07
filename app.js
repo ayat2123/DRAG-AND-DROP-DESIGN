@@ -1,27 +1,26 @@
-const dragItems =document.querySelector("list")
-const leftEl =document.querySelector("box")
-const rightEl =document.querySelector("box")
+const dragItems =document.querySelector(".list")
+const leftEl =document.querySelector(".box")
+const rightEl =document.querySelector(".box")
 
-for(list in dragItems){
-
-    list.addEventListener("dragstart",(event)=>{
+dragItems.forEach(item => {
+    item.addEventListener("dragstart",(event)=>{
+       const dragstartitem= event.target
+});
+})
+    leftEl.addEventListener("dragover",(event)=>{
         event.preventDefault()
-       const dragstartitem= e.target
-    })
-    leftEl.addEventListener("dragover",(e)=>{
-           
     })
     
-    leftEl.addEventListener("drop",(e)=>{
-               
+    leftEl.addEventListener("drop",(event)=>{
+        event.preventDefault()
         leftEl.appendChild(dragstartitem)
     })
-    rightEl.addEventListener("dragover",(e)=>{
-           
+    rightEl.addEventListener("dragover",(event)=>{
+        event.preventDefault()
+
     })
     
-    rightEl.addEventListener("drop",(e)=>{
-               
+    rightEl.addEventListener("drop",(event)=>{
+        event.preventDefault()
         rightEl.appendChild(dragstartitem)
     })
-}
